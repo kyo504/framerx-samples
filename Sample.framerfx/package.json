@@ -1,0 +1,20 @@
+{
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.4.16",
+		"framer": "^0.10.1"
+	},
+	"peerDependencies": {
+		"framer": "^0.10.1",
+		"react": "^16.3.0",
+		"react-dom": "^16.3.0"
+	},
+	"framer": {
+		"id": "2db9a41d-4414-4505-8caa-b71add995819"
+	},
+	"author": "Daniel Jung",
+	"dependencies": {
+		"@material-ui/core": "^3.9.0"
+	}
+}
