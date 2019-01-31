@@ -15,14 +15,6 @@ interface IState {
 const DEFAULT_COVER_URL =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP89B8AAukB8/71MdcAAAAASUVORK5CYII=';
 
-function getCoverUrl(story): string {
-  if (story.cover_url) {
-    return `${story.cover_url}?w=250`;
-  } else {
-    return DEFAULT_COVER_URL;
-  }
-}
-
 export class StoryList extends React.Component<IProps, IState> {
 
   static defaultProps: Partial<IProps> = {
@@ -68,13 +60,7 @@ export class StoryList extends React.Component<IProps, IState> {
       <List>
         {stories.map(story => {
           return (
-            <div key={story.id} style={{ display: 'flex', flexDirection: 'row', border: '1px solid #ffff00' }}>
-              <img src={getCoverUrl(story)} style={{ width: '54px', height: '74px', border: '1px solid #ff00ff'}}/>
-              <div style={{ flex: 1, border: '1px solid #00ffff'}}>
-                <div>{story.title}</div>
-                <div>{story.user.id}</div>
-              </div>
-            </div>    
+            <StoryCard key={story.id} thumbUrl={story.cover_url} title={story.title} writer={story.user.id} />
           )
         })}
       </List>

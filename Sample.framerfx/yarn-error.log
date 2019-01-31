@@ -14,8 +14,12 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:57:26)
+  Error: https://registry.yarnpkg.com/@material-ui%2fcore: ETIMEDOUT
+      at Timeout._onTimeout (/Applications/Framer X.app/Contents/Resources/Server/node_modules/yarn/lib/cli.js:138128:19)
+      at ontimeout (timers.js:436:11)
+      at tryOnTimeout (timers.js:300:5)
+      at listOnTimeout (timers.js:263:5)
+      at Timer.processTimers (timers.js:223:10)
 
 npm manifest: 
   {
